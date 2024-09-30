@@ -65,7 +65,7 @@ parser.add_argument(
     'paths', type=str, nargs='+',
     help=('Point to (multiple) tensorboard event files (by default, their '
           'names are something like '
-          'events.out.tfevents.1601909417.tyszkiew-disk-1.30.0')
+          'events.out.tfevents.1601909417.tyszkiew-repo_disk-1.30.0')
 )
 args = parser.parse_args()
 

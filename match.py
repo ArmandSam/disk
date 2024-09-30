@@ -26,7 +26,7 @@ if __name__ == '__main__':
         '--u16', action='store_true',
         help=('Store matches with as uin16. This won\'t work if you have '
               'more than ~65k features in an image, but otherwise saves '
-              'disk space.')
+              'repo_disk space.')
     )
     parser.add_argument(
         '--rt', type=float, default=None,

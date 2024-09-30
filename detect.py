@@ -246,8 +246,8 @@ if __name__ == '__main__':
     # compatibility with older model saves which used the 'extractor' name
     if 'extractor' in state_dict:
         weights = state_dict['extractor']
-    elif 'disk' in state_dict:
-        weights = state_dict['disk']
+    elif 'repo_disk' in state_dict:
+        weights = state_dict['repo_disk']
     else:
         raise KeyError('Incompatible weight file!')
     model = DISK(window=8, desc_dim=args.desc_dim)

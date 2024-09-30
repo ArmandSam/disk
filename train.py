@@ -97,13 +97,13 @@ disk = DISK(window=8, desc_dim=args.desc_dim)
 
 # maybe load from a checkpoint
 if args.load is not None:
-    state_dict = torch.load(args.load, map_location='cpu')['disk'] 
+    state_dict = torch.load(args.load, map_location='cpu')['repo_disk']
     disk.load_state_dict(state_dict)
 
 disk = disk.to(DEV)
 
 # get training datasets. They will yield Images as defined in
-# disk/common/image.py. This structure contains the actual bitmap,
+# repo_disk/common/image.py. This structure contains the actual bitmap,
 # camera position and intrinsics (focal length, etc) and optionally
 # depth maps.
 train_chunk_iter, test_iter = get_datasets(
@@ -181,7 +181,7 @@ for e, chunk in enumerate(train_chunk_iter):
         bitmaps_ = bitmaps.reshape(-1, *bitmaps.shape[2:])
 
         # extract the features. They are a numpy array of size [2 * batch_size]
-        # which contains objects of type disk.common.Features
+        # which contains objects of type repo_disk.common.Features
         features_ = disk.features(bitmaps_, kind='rng')
         # reshape them back to [2, batch_size]
         features = features_.reshape(*bitmaps.shape[:2])
@@ -213,7 +213,7 @@ for e, chunk in enumerate(train_chunk_iter):
             break
 
     torch.save({
-        'disk': disk.state_dict(),
+        'repo_disk': disk.state_dict(),
     }, f'{args.save_dir}/save-{e}.pth')
 
     # validation loop
