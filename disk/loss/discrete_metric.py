@@ -2,8 +2,8 @@ import torch, math
 import numpy as np
 from torch_dimcheck import dimchecked
 
-from disk import MatchedPairs, Image, NpArray
-from disk.geom.epi import p_asymmdist_from_imgs
+from lib.DISK.repo_disk.disk import MatchedPairs, Image, NpArray
+from lib.DISK.repo_disk.disk.geom.epi import p_asymmdist_from_imgs
 
 @dimchecked
 def classify_pairs(kps1: ['N', 2], kps2: ['N', 2], img1: Image, img2: Image, th):

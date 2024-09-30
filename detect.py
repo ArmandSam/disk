@@ -6,7 +6,8 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from torch_dimcheck import dimchecked
 
-from disk import DISK, Features
+from lib.DISK.repo_disk.disk import DISK, Features
+
 
 class Image:
     def __init__(self, bitmap: ['C', 'H', 'W'], fname: str, orig_shape=None):

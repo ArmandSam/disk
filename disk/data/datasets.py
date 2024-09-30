@@ -1,7 +1,7 @@
 import itertools, os
 from torch.utils.data import DataLoader
 
-from disk.data import DISKDataset
+from lib.DISK.repo_disk.disk.data import DISKDataset
 
 def get_datasets(
     root,

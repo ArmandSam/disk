@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 
-from disk import MatchDistribution, Features, NpArray, Image
+from lib.DISK.repo_disk.disk import MatchDistribution, Features, NpArray, Image
 
 class Reinforce:
     def __init__(self, reward, lm_kp):

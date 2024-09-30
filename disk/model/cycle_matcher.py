@@ -2,8 +2,8 @@ import torch, typing
 import numpy as np
 from torch_dimcheck import dimchecked
 
-from disk import NpArray, Features, MatchedPairs
-from disk.geom import distance_matrix
+from lib.DISK.repo_disk.disk import NpArray, Features, MatchedPairs
+from lib.DISK.repo_disk.disk.geom import distance_matrix
 
 class CycleMatcher:
     @dimchecked

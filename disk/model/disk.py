@@ -4,8 +4,9 @@ import numpy as np
 from torch_dimcheck import dimchecked
 from unets import Unet, thin_setup
 
-from disk import NpArray, Features
-from disk.model.detector import Detector
+
+from lib.DISK.repo_disk.disk import NpArray, Features
+from lib.DISK.repo_disk.disk.model.detector import Detector
 
 DEFAULT_SETUP = {**thin_setup, 'bias': True, 'padding': True}
 

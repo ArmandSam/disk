@@ -4,9 +4,9 @@ import multiprocessing as mp
 import multiprocessing.dummy as mpd
 from typing import Dict
 
-from disk import MatchedPairs, Image, NpArray, EstimationFailedError
-from disk.loss.ransac import Ransac
-from disk.geom import Pose, PoseError
+from lib.DISK.repo_disk.disk import MatchedPairs, Image, NpArray, EstimationFailedError
+from lib.DISK.repo_disk.disk.loss.ransac import Ransac
+from lib.DISK.repo_disk.disk.geom import Pose, PoseError
 
 CPU = torch.device('cpu')
 

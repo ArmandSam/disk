@@ -2,8 +2,8 @@ import torch, pydegensac, cv2, typing
 
 from torch_dimcheck import dimchecked
 
-from disk import EstimationFailedError
-from disk.geom import Pose
+from lib.DISK.repo_disk.disk import EstimationFailedError
+from lib.DISK.repo_disk.disk.geom import Pose
 
 @dimchecked
 def _recover_pose(E: [3, 3], i_coords: ['N', 2], j_coords: ['N', 2]):

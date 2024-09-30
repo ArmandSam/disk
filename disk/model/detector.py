@@ -5,8 +5,8 @@ import torch.nn.functional as F
 from torch.distributions import Categorical, Bernoulli
 from torch_dimcheck import dimchecked
 
-from disk import Features, NpArray
-from disk.model.nms import nms
+from lib.DISK.repo_disk.disk import Features, NpArray
+from lib.DISK.repo_disk.disk.model.nms import nms
 
 @dimchecked
 def select_on_last(values: [..., 'T'], indices: [...]) -> [...]:

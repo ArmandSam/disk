@@ -3,8 +3,8 @@ from torch import nn
 from torch.distributions import Categorical
 from torch_dimcheck import dimchecked
 
-from disk import Features, NpArray, MatchDistribution
-from disk.geom import distance_matrix
+from lib.DISK.repo_disk.disk import Features, NpArray, MatchDistribution
+from lib.DISK.repo_disk.disk.geom import distance_matrix
 
 class ConsistentMatchDistribution(MatchDistribution):
     def __init__(

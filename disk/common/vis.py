@@ -6,7 +6,7 @@ from matplotlib import collections as mplcollections
 from matplotlib import colors as mcolors
 from torch_dimcheck import dimchecked
 
-from disk import MatchedPairs
+from lib.DISK.repo_disk.disk import MatchedPairs
 
 class MultiFigure:
     @dimchecked

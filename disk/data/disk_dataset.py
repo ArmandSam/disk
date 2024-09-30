@@ -3,9 +3,9 @@ import numpy as np
 import os.path as P
 from torch_dimcheck import dimchecked
 
-from disk import NpArray, Image, DataError
-from disk.data.tuple_dataset import TupleDataset
-from disk.data.limited_dataset import LimitedConcatDataset
+from lib.DISK.repo_disk.disk import NpArray, Image, DataError
+from lib.DISK.repo_disk.disk.data.tuple_dataset import TupleDataset
+from lib.DISK.repo_disk.disk.data.limited_dataset import LimitedConcatDataset
 
 '''
 The datasets are all loaded based on a json file which specifies which tuples

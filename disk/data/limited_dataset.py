@@ -2,7 +2,7 @@ import warnings, random
 
 from torch.utils.data import ConcatDataset
 
-from disk import DataError
+from lib.DISK.repo_disk.disk import DataError
 
 class LimitableDataset:
     '''
